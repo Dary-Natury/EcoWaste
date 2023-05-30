@@ -1,0 +1,24 @@
+---
+title: "Ekstrakt zoledziowy"
+author: "Bioinfo"
+date: "`r Sys.Date()`"
+output: pdf_document
+theme: united
+mainfront: CourierNew
+---
+
+\begin{center}
+
+\textbf{Ekstrakt zoledziowy}
+
+\end{center}
+
+```{r setup, include=FALSE}
+Mix <- read.csv("Ekstrakt_zoledziowy_produkt.csv", header = T, sep = ",",check.names = F)
+ph <- read.csv("ph_ekstraktu.csv", header = T, sep = ",",check.names = F)
+library(knitr)
+```
+
+```{r block, echo=FALSE, fig.align="center", message=FALSE, warning=FALSE, comment = NA}
+kable(Mix, row.names = T, align = "c")
+kable(ph, row.names = F, align = "c")

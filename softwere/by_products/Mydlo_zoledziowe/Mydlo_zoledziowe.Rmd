@@ -1,0 +1,24 @@
+---
+title: "Mydlo zoledziowe"
+author: "Bioinfo"
+date: "`r Sys.Date()`"
+output: pdf_document
+theme: united
+mainfront: CourierNew
+---
+
+\begin{center}
+
+\textbf{Mydlo zoledziowe}
+
+\end{center}
+
+```{r setup, include=FALSE}
+Mix <- read.csv("Mydlo_zoledziowe_produkt.csv", header = T, sep = ",",check.names = F)
+library(knitr)
+```
+
+```{r block, echo=FALSE, fig.align="center", message=FALSE, warning=FALSE, comment = NA}
+kable(Mix, row.names = T, align = "c")
+```
+
