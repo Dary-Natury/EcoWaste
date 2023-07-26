@@ -1,0 +1,25 @@
+---
+title: "Hydrolat ziolowy z mydlem do odkazania"
+author: "Dary Natury"
+date: "`r Sys.Date()`"
+output: pdf_document
+theme: united
+mainfront: CourierNew
+---
+
+\begin{center}
+
+\textbf{Hydrolat ziolowy z mydlem do odkazania}
+
+\end{center}
+
+```{r setup, include=FALSE}
+Mix <- read.csv("Hydrolat_ziolowy_z_mydlem_do_odkazania_produkt.csv", header = T, sep = ",",check.names = F)
+library(knitr)
+```
+
+```{r block, echo=FALSE, fig.align="center", message=FALSE, warning=FALSE, comment = NA}
+kable(Mix, row.names = T, align = "c")
+```
+
+
